@@ -1,95 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link type="text/css" rel="stylesheet" href="styles.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <link type="text/css" rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
-<div class="perspective-text">
-  <div class="perspective-line">
-    <p></p>
-    <p></p>
-    <p></p>
-    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
-    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
-    <p style="border-left: 6px solid #78b4f0;">My Website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
-  </div>
-  <div class="perspective-line">
-    <p></p>
-    <p></p>
-    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
-    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
-    <p style="border-left: 6px solid #78b4f0;">My Website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
-  </div>
-  <div class="perspective-line">
-    <p></p>
-    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
-    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
-    <p style="border-left: 6px solid #78b4f0;">My Website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
-  </div>
-  <div class="perspective-line">
-    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
-    <p style="border-left: 6px solid #78b4f0;">Welcome to</p>
-    <p style="border-left: 6px solid #78b4f0;">My Website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
-    <p></p>
-  </div>
-  <div class="perspective-line">
-    <p style="border-left: 6px solid #78b4f0;">Welcome to</p>
-    <p style="border-left: 6px solid #78b4f0;">My website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="perspective-line">
-    <p style="border-left: 6px solid #78b4f0;">My website</p>
-    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="perspective-line">
-    <p style="border-top: 6px solid #78b4f0; padding-right: 1500px; border-left: 6px solid #78b4f0;"></p>
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">harry.Whitnear@gmail.com</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="perspective-line">
-    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="perspective-line">
-    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
-    <p>&nbsp;</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
+<span id="current_page" data-page="1"></span>
+<button type="button" class="pageChanger" id="pageLeft"><</button>
+<button type="button" class="pageChanger" id="pageRight">></button>
+<div class="page" id="page_1">
+	<div class="perspective-text">
+	  <div class="perspective-line">
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
+	    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
+	    <p style="border-left: 6px solid #78b4f0;">My Website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
+	  </div>
+	  <div class="perspective-line">
+	    <p></p>
+	    <p></p>
+	    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
+	    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
+	    <p style="border-left: 6px solid #78b4f0;">My Website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
+	  </div>
+	  <div class="perspective-line">
+	    <p></p>
+	    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
+	    <p style="border-left: 6px solid #78b4f0;">Weclome To</p>
+	    <p style="border-left: 6px solid #78b4f0;">My Website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@Gmail.com</p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="color: #78f0b4; border-left: 6px solid #78b4f0;">Hi, I'm Harry</p>
+	    <p style="border-left: 6px solid #78b4f0;">Welcome to</p>
+	    <p style="border-left: 6px solid #78b4f0;">My Website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
+	    <p></p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="border-left: 6px solid #78b4f0;">Welcome to</p>
+	    <p style="border-left: 6px solid #78b4f0;">My website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
+	    <p></p>
+	    <p></p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="border-left: 6px solid #78b4f0;">My website</p>
+	    <p style="border-top: 6px solid #78b4f0; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="border-top: 6px solid #78b4f0; padding-right: 1500px; border-left: 6px solid #78b4f0;"></p>
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">harry.Whitnear@gmail.com</p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="border-left: 6px solid #78b4f0;">07912 307 436</p>
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	  </div>
+	  <div class="perspective-line">
+	    <p style="border-left: 6px solid #78b4f0;">Harry.Whitnear@gmail.com</p>
+	    <p>&nbsp;</p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	    <p></p>
+	  </div>
+	</div>
+</div>
+<div class="page" id="page_2">
+	<div class="container">
+		<p>test</p>
+	</div>
 </div>
 </body>
 </html>
+
+<script src="script.js"></script>
