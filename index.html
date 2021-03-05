@@ -7,13 +7,14 @@
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
+  <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
   <link type="text/css" rel="stylesheet" href="styles.css">
   
 </head>
 <body>
 <span id="current_page" data-page="1"></span>
-<button type="button" class="pageChanger" id="pageLeft"><</button>
-<button type="button" class="pageChanger" id="pageRight">></button>
+<button type="button" class="pageChanger" id="pageLeft" onclick="move_down()" disabled><</button>
+<button type="button" class="pageChanger" id="pageRight" onclick="move_up()">></button>
 <div class="page" id="page_1">
 	<div class="perspective-text">
 	  <div class="perspective-line">
@@ -103,8 +104,43 @@
 	</div>
 </div>
 <div class="page" id="page_2">
-	<div class="container">
-		<p>test</p>
+	<div id="page_2_container">
+		<h1>About me</h1>
+		<p>I started learning Python for fun in my spare time</p>
+		<p>Since my first Hello World script i've learned a lot</p>
+		<p>I am mostly self-taught but also enrolled and completed <a href="CS50xcert.png">CS50X</a> and <a href="CS50wcert.png">CS50W</a> from Harvard</p>
+		<p>I now feel ready to put my skills to use in a challenging work enviroment</p>
+		<hr>
+		<h1>Languages</h1>
+		<img class="languageImg" data-language="Python" src="https://img.icons8.com/color/48/000000/python.png"/>
+		<img class="languageImg" data-language="HTML" src="https://img.icons8.com/color/48/000000/html-5.png"/>
+		<img class="languageImg" data-language="CSS" src="https://img.icons8.com/color/48/000000/css3.png"/>
+		<img class="languageImg" data-language="JavaScript" src="https://img.icons8.com/color/48/000000/javascript.png"/>
+		<img class="languageImg" data-language="C" src="https://img.icons8.com/color/48/000000/c-programming.png"/>
+		<img class="languageImg" data-language="MySQL" src="https://img.icons8.com/ios-filled/50/000000/mysql-logo.png"/>
+		<div class="languageNameDiv">
+			<p class="infoTab"></p>
+		</div>
+		<hr>
+		<h1>Contact Me</h1>
+		<li style="list-style-type:none">
+			<ul>
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="24" height="24"
+					viewBox="0 0 172 172"
+					style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M57.33333,17.18881c0.72787,0 0.72787,0 1.42774,0.72786c0.72786,0.72787 2.88347,2.85547 2.88347,4.3112c0,1.42773 0,5.01106 0.69987,7.86653c1.42774,3.58333 2.88347,12.9056 5.01107,17.91667c2.1556,5.01107 2.88346,7.89453 0.72786,10.75c-2.1556,3.58333 -15.76107,17.2168 -15.76107,17.2168c0,0 3.58333,7.16667 7.86654,11.44987c3.58333,5.01107 9.32226,12.17774 16.48893,17.91667c7.16667,6.4668 15.06119,12.17774 22.92774,15.76107c7.89453,-7.86654 14.33333,-14.33333 16.48893,-15.76107c2.1556,-1.42774 2.1556,-2.1556 5.73893,-0.69987c3.58333,1.42773 8.5944,3.58333 14.33333,4.2832c5.01107,0.72786 10.75,1.42774 14.33333,2.1556c3.58333,0.72787 3.58333,0.72787 4.3112,2.1556c1.42773,1.42774 2.1276,3.58333 2.1276,4.28321c0,0.72786 0,2.88346 0,10.05012c0,7.16667 0,17.18881 0,19.3444c0,2.1556 0,2.1556 -0.69988,3.58333c-0.72786,1.42774 -1.42773,5.01107 -1.42773,5.01107c0,0.72786 -3.58333,2.1556 -5.73894,2.1556c-2.1556,0 -10.05012,0 -15.06119,-0.72786c-5.01107,-0.69988 -18.61653,-3.58333 -23.6556,-5.71094c-5.01107,-1.45573 -21.5,-7.16667 -41.54427,-22.22787c-18.64453,-14.33333 -32.25,-33.67774 -40.14453,-49.4388c-7.89453,-15.78906 -12.17774,-32.97787 -12.9056,-41.57227c-1.42774,-8.5944 -1.42774,-12.17773 -1.42774,-14.33333c0.72787,-2.1556 2.85547,-4.31119 4.3112,-5.01106c1.42773,-0.72787 3.58333,-1.45573 5.71094,-1.45573c2.1556,0 7.89453,0 15.78906,0c7.86653,0 17.1888,0 17.1888,0z"></path></g></g></svg>
+					<p class="contact_info">07912 307436</p>
+			</ul>
+			<ul id="email_list_item">
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="26" height="26"
+					viewBox="0 0 172 172"
+					style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M100.57452,113.36599h-0.62019c-4.75481,13.35997 -13.35997,20.02704 -25.86719,20.02704c-9.38041,0 -16.92608,-3.48858 -22.66286,-10.49159c-5.76262,-6.97716 -8.63101,-16.66767 -8.63101,-29.04567c0,-15.99579 3.97957,-29.01983 11.93871,-39.07212c7.93329,-10.02644 17.52043,-15.03966 28.70973,-15.03966c10.12981,0 16.48678,4.08293 19.07092,12.27463h0.41346l1.00781,-10.38822h22.92127c-3.04928,29.79507 -4.59976,49.2536 -4.59976,58.42728c0,9.79387 2.58413,14.67788 7.7524,14.67788c5.45253,0 9.92308,-3.72115 13.46334,-11.11178c3.51442,-7.41647 5.29747,-17.10697 5.29747,-29.04567c0,-16.35758 -5.0649,-29.76923 -15.19471,-40.23498c-10.12981,-10.4399 -24.23918,-15.68569 -42.37981,-15.68569c-19.43269,0 -35.58353,6.97716 -48.45252,20.93149c-12.86899,13.95433 -19.30349,30.95794 -19.30349,51.03666c0,19.43269 5.6851,34.73077 17.05529,45.92007c11.39603,11.1893 27.08173,16.79688 47.13462,16.79688c15.29808,0 29.27824,-2.9976 41.99219,-9.01863v20.02704c-11.6286,5.09074 -26.5649,7.64904 -44.83474,7.64904c-25.09194,0 -45.48077,-7.39062 -61.19231,-22.17187c-15.73738,-14.8071 -23.59315,-34.67909 -23.59315,-59.64183c0,-25.45373 8.39844,-46.82452 25.16947,-64.16406c16.77103,-17.33954 38.3744,-26.02224 64.8101,-26.02224c24.44591,0 44.24038,6.71875 59.35757,20.18209c15.11719,13.46335 22.66286,31.21635 22.66286,53.23317c0,18.11479 -4.6256,32.63762 -13.85096,43.59435c-9.2512,10.93089 -20.69892,16.40926 -34.34315,16.40926c-6.71875,0 -12.19712,-1.86058 -16.40926,-5.55589c-4.21214,-3.72115 -6.48618,-8.55349 -6.82212,-14.49699zM87.00781,57.98798c-6.09856,0 -11.08594,3.59195 -14.91046,10.75c-3.85037,7.1839 -5.76262,15.47897 -5.76262,24.91106c0,6.71875 1.31791,11.93871 3.92788,15.6857c2.60997,3.74699 5.96935,5.60757 10.12981,5.60757c6.38281,0 11.42187,-3.51442 15.09135,-10.59495c3.64363,-7.05469 5.47837,-16.48678 5.47837,-28.29628c0,-5.60757 -1.26622,-10.0006 -3.82452,-13.23077c-2.53246,-3.20433 -5.91767,-4.83233 -10.12981,-4.83233z"></path></g></g></svg>
+					<p class="contact_info" id="contact_email">Harry.Whitnear@gmail.com</p>
+				<p id="copyTooltip">click to copy to clipboard</p>
+				<p id="copiedPopup">copied</p>
+			</ul>
+		</li>
 	</div>
 </div>
 </body>

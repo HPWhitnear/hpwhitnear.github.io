@@ -7,7 +7,12 @@ body {
     background: -webkit-linear-gradient(90deg, rgba(232,145,70,1) 29%, rgba(218,70,38,1) 74%);
     background: linear-gradient(90deg, rgba(232,145,70,1) 29%, rgba(218,70,38,1) 74%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e89146",endColorstr="#da4626",GradientType=1);
+    color: white;
   
+}
+
+h1 {
+    color: #78f0b4
 }
 .perspective-text {
     color: white;
@@ -102,6 +107,21 @@ body {
     font-weight: bold;
     font-size: 50px;
     z-index: 10000;
+    transition: 0.5s;
+}
+
+.pageChanger:focus {
+    border: none;
+    outline: none;
+}
+
+.pageChanger:disabled {
+    color: #999999;
+    opacity: 50%;
+}
+
+.pageChanger:hover {
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
 
 #pageRight {
@@ -110,4 +130,69 @@ body {
 
 #pageLeft {
     left: 5%;
+}
+
+.languageName {
+    font-weight: bold;
+}
+
+#page_2_container, #page_3_container {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+.languageNameDiv {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.infoTab {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#typerSpan {
+    display:inline-block;
+}
+.contact_info {
+    display: inline;
+}
+#copyTooltip {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 10px;
+    color: #555;
+}
+#copiedPopup {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    text-align: right;
+    font-size: 10px;
+    color: #555;
+    background-color: #fff;
+    border-radius: 20%;
+}
+.contact_email {
+    z-index: 1000;
+    pointer-events: auto;
+    
+}
+
+#email_list_item {
+    position: relative; 
+    width: 300px; 
+    margin-right: auto; 
+    margin-left: auto;
+    cursor: pointer;
 }
